@@ -31,7 +31,7 @@
         android:text="@string/Get_Started"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:onClick="irActivity2"
+
         android:textSize="18sp" />
 
     <LinearLayout
@@ -53,7 +53,7 @@
         android:layout_margin="16dp"
         android:text="@string/Skip"
         android:textColor="#292929"
-        android:onClick="irActivity2"
+
         android:textSize="18sp" />
 
 

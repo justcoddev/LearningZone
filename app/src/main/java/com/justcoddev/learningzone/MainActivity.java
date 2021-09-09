@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -31,34 +30,34 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       /*
-       *Elimiaremos la barra de estado de la parte superior de la aplicacion
-       * y se la reemplazaremos por otra
-       * */
+      /*
+       Eliminaremos la barra de estado de la parte superior de la aplicacion
+        y se la reemplazaremos por otra
+            */
 
         setContentView(R.layout.activity_main);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        //Views
+        //Views components
         dotsLayout = findViewById(R.id.dots_layout);
         getStarted = findViewById(R.id.start_btn);
         skip = findViewById(R.id.txt_skip);
         viewPager2 = findViewById(R.id.viewpager2);
 
 
-        skip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Skipped", Toast.LENGTH_SHORT).show();
-            }
+
+        getStarted.setOnClickListener((View v) -> {
+            Toast.makeText(MainActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+            showActivity2();
+
         });
-        getStarted.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Started", Toast.LENGTH_SHORT).show();
-            }
+        skip.setOnClickListener((View v) -> {
+            Toast.makeText(MainActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+            showActivity2();
+
         });
+
 //Adding data to list
         data = new ArrayList<>();
         data.add(new Data("Manage Goals", getResources().getString(R.string.string_one), R.drawable.ut01));
@@ -121,12 +120,12 @@ public class MainActivity extends AppCompatActivity {
             dotsLayout.addView(dots[i]);
         }
     }
+
     //ir a actividad 2
-    public void irActivity2(View vista){
+    public void showActivity2(){
         Intent miIntent = new Intent(this, MainActivity2.class);
         startActivity(miIntent);
 
     }
-
 
 }
