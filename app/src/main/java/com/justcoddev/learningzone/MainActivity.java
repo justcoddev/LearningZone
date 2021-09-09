@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,13 +26,16 @@ public class MainActivity extends AppCompatActivity {
     Button getStarted;
     TextView skip;
     ViewPager2 viewPager2;
-    ImageView[] dots;
+    ImageView[] dots; //check
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Elimiaremos la barra de estado de la parte superior de la aplicacion
-        //y se la reemplazaremos por otra
+       /*
+       *Elimiaremos la barra de estado de la parte superior de la aplicacion
+       * y se la reemplazaremos por otra
+       * */
+
         setContentView(R.layout.activity_main);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -39,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         //Views
         dotsLayout = findViewById(R.id.dots_layout);
         getStarted = findViewById(R.id.start_btn);
-        skip = findViewById(R.id.skip);
-        viewPager2 = findViewById(R.id.view_pager_2);
+        skip = findViewById(R.id.txt_skip);
+        viewPager2 = findViewById(R.id.viewpager2);
 
 
         skip.setOnClickListener(new View.OnClickListener() {
@@ -116,6 +120,12 @@ public class MainActivity extends AppCompatActivity {
             dots[i].setLayoutParams(params);
             dotsLayout.addView(dots[i]);
         }
+    }
+    //ir a actividad 2
+    public void irActivity2(View vista){
+        Intent miIntent = new Intent(this, MainActivity2.class);
+        startActivity(miIntent);
+
     }
 
 
