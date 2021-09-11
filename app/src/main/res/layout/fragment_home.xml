@@ -29,23 +29,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Get_Started"
 
-                android:textColor="@color/back_btn_nav"
-                android:textSize="48sp"
-                android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
 
-                android:text="@string/app_name"
-                android:textColor="@color/black"
-                android:textSize="48sp" />
 
 
         </LinearLayout>
