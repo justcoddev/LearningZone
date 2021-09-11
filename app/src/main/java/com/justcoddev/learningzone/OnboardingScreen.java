@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+//import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,12 +48,12 @@ public class OnboardingScreen extends AppCompatActivity {
 
 
         getStarted.setOnClickListener((View v) -> {
-            Toast.makeText(OnboardingScreen.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(OnboardingScreen.this, "Bienvenido", Toast.LENGTH_SHORT).show();
             showActivity2();
 
         });
         skip.setOnClickListener((View v) -> {
-            Toast.makeText(OnboardingScreen.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(OnboardingScreen.this, "Bienvenido", Toast.LENGTH_SHORT).show();
             showActivity2();
 
         });
