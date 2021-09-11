@@ -18,7 +18,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class OnboardingScreen extends AppCompatActivity {
     LinearLayout dotsLayout;
     SliderAdapter adapter;
     List<Data> data;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         y se la reemplazaremos por otra
             */
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_onboarding);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -48,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         getStarted.setOnClickListener((View v) -> {
-            Toast.makeText(MainActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+            Toast.makeText(OnboardingScreen.this, "Bienvenido", Toast.LENGTH_SHORT).show();
             showActivity2();
 
         });
         skip.setOnClickListener((View v) -> {
-            Toast.makeText(MainActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+            Toast.makeText(OnboardingScreen.this, "Bienvenido", Toast.LENGTH_SHORT).show();
             showActivity2();
 
         });
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
     //ir a actividad 2
     public void showActivity2(){
-        Intent miIntent = new Intent(this, MainActivity2.class);
+        Intent miIntent = new Intent(this, Menu.class);
         startActivity(miIntent);
 
     }
