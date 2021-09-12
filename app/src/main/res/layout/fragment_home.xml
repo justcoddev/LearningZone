@@ -36,22 +36,7 @@
 
         </LinearLayout>
     </ScrollView>
-    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
 
-        android:id="@+id/bottom_navigation_Menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:mbn_backgroundBottomColor="@color/teal_700"
-        app:mbn_circleColor="@color/black"
-        app:mbn_countBackgroundColor="@color/back_nav"
-        app:mbn_countTextColor="@color/white"
-        app:mbn_defaultIconColor="@color/white"
-        app:mbn_rippleColor="#2f424242"
-        app:mbn_selectedIconColor="@color/icon_nav"
-        app:mbn_shadowColor="#1f212121"/>
 
 
 
