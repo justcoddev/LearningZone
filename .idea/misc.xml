@@ -5,16 +5,18 @@
       <map>
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/drawable/btn_bg.xml" value="0.1" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/drawable/ic_bookmarks.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/drawable/selected_dot.xml" value="0.2203125" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/drawable/selected_dpt.xml" value="0.2203125" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/drawable/unselected_dot.xml" value="0.1" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/OnboardingScreen.xml" value="0.1" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/activity_main2.xml" value="0.15208333333333332" />
-        <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/activity_menu.xml" value="0.1" />
+        <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/activity_menu.xml" value="0.18" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/activity_onboarding.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/all_areas.xml" value="0.25" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/fragment_bookmark.xml" value="0.13" />
-        <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/fragment_home.xml" value="0.18" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/fragment_markbooks.xml" value="0.1" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/fragment_profile.xml" value="0.15625" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/LearningZone/app/src/main/res/layout/slider_item.xml" value="0.14" />

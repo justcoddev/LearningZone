@@ -112,10 +112,15 @@ public class HomeFragment extends Fragment {
         modelList.add(new Areas("Desarrollo de software13","ddd",R.drawable.ut01));
     }*/
 
+
+
+
     public void Dataview() {
         recyclerViewAreas.setLayoutManager(new LinearLayoutManager(getContext()));
         areasAdapter = new AreasAdapter(getContext(), listAreas);
         recyclerViewAreas.setAdapter(areasAdapter);
+
+
     }
 
     public void updatelist() {
