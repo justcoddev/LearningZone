@@ -149,12 +149,12 @@ public class HomeFragment extends Fragment {
     }
 
     public void updatelist() {
-        listAreas.add(new Areas("1. Desarrollo de Web", "La web es todo lo que se puede ejecutar en un navegador. ¿Y qué es un navegador? Son programas como Chrome, Opera, Microsoft Edge que nos permiten acceder a sitios como Twitter, Facebook, YouTube, Slack, etc.", R.drawable.ut01));
+        listAreas.add(new Areas("1. Desarrollo de Web", "La web es todo lo que se puede ejecutar en un navegador. ¿Y qué es un navegador? Son programas como Chrome, Opera, Microsoft Edge que nos permiten acceder a sitios como Twitter, Facebook, YouTube, Slack, etc.", R.drawable.ut01, "FrontEnd"));
         listAreas.add(new Areas("2. Desarrollo Movil", "El desarrollo móvil es simples palabras es crear aplicaciones para teléfonos y estas pueden funcionar en 2 sistemas operativos: Android de Google y iOS de Apple.\n" +
                 "\n" +
-                "En Android puedes desarrollar con lenguajes como Kotlin o Java, mientras que en IOS está Swift.", R.drawable.ut01));
-        listAreas.add(new Areas("3. Desarrollo de Videojuegos", "Ya todos los conocemos, tienen sus propias consolas, están en móviles, en ordenadores y consolas. Su mundo es enorme, hay diseñadores, storytelling, modelado de personajes. Entre los motores más importantes que puedes usar para desarrollar videojuegos se encuentran, Unity 3D que utiliza C# y Unreal Engine que usa C++.", R.drawable.ut02));
-        listAreas.add(new Areas("4. Realidad Virtual y Aumentada", "La realidad virtual es una inmersión total, se suele utilizar un casco o lentes que ocupa toda tu visión, y con ello puedes transportarte a un mundo de ensueño, hay proyectos muy conocidos como Beat Saber y Half-Life: Alyx.\n" +
+                "En Android puedes desarrollar con lenguajes como Kotlin o Java, mientras que en IOS está Swift.", R.drawable.ut01, "java"));
+        listAreas.add(new Areas("3. Desarrollo de Videojuegos", "Ya todos los conocemos, tienen sus propias consolas, están en móviles, en ordenadores y consolas. Su mundo es enorme, hay diseñadores, storytelling, modelado de personajes. Entre los motores más importantes que puedes usar para desarrollar videojuegos se encuentran, Unity 3D que utiliza C# y Unreal Engine que usa C++.", R.drawable.ut02,""));
+        /*listAreas.add(new Areas("4. Realidad Virtual y Aumentada", "La realidad virtual es una inmersión total, se suele utilizar un casco o lentes que ocupa toda tu visión, y con ello puedes transportarte a un mundo de ensueño, hay proyectos muy conocidos como Beat Saber y Half-Life: Alyx.\n" +
                 "\n" +
                 "Mientras que la realidad aumentada combina nuestra realidad con la virtual, un ejemplo de ello es Pokémon GO o los filtros de Snapchat. ", R.drawable.ut01));
 
@@ -165,7 +165,7 @@ public class HomeFragment extends Fragment {
                 "Ofensiva\n"+"\n" +"Defensiva", R.drawable.ut01));
         listAreas.add(new Areas("8. Machine learning", "Básicamente consiste en enseñarle a las computadores a través de enormes volúmenes de datos, El papel de los programadores en este ámbito es crear los modelos, es decir la secuencia de pasos para que en Machine learning se pueda crear algo, y así encontrar patrones para poder predecir una acción a futuro, por ejemplo: en Netflix los usuarios reciben recomendaciones en base a las películas/series que observaron previamente.", R.drawable.ut01));
         listAreas.add(new Areas("9. Cloud computing", "La nube es una red mundial de servidores que ofrecen servicios de almacenamiento, bases de datos, redes, software, análisis e inteligencia a través de internet. Esto les permite a las empresas y usuarios pagar solamente por lo que usan, lo cual realmente es un beneficio enorme. Ya que no tienen que adquirir equipos caros y todo lo que conllevan, sino que por un pago menor pueden optar hasta por una supercomputadora.", R.drawable.ut01));
-
+*/
     }
 
     @Override

@@ -6,19 +6,30 @@ public class Areas implements Serializable {
     private String name;
     private String description;
     private int image_id;
+    private String title_area;
+
 private boolean expanded;
     public Areas() {
     }
 
-    public Areas(String name, String description, int image_id) {
+    public Areas(String name, String description, int image_id, String title_area) {
         this.name = name;
         this.description = description;
         this.image_id = image_id;
+        this.title_area =title_area;
         this.expanded= false;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getTitle_area() {
+        return title_area;
+    }
+
+    public void setTitle_area(String title_area) {
+        this.title_area = title_area;
     }
 
     public void setName(String name) {
