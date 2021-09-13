@@ -149,7 +149,7 @@ public class HomeFragment extends Fragment {
     }
 
     public void updatelist() {
-        listAreas.add(new Areas("1. Desarrollo de Web", "La web es todo lo que se puede ejecutar en un navegador. ¿Y qué es un navegador? Son programas como Chrome, Opera, Microsoft Edge que nos permiten acceder a sitios como Twitter, Facebook, YouTube, Slack, etc.", R.drawable.ut01, "FrontEnd"));
+        listAreas.add(new Areas("1. Desarrollo de Web", "La web es todo lo que se puede ejecutar en un navegador. ¿Y qué es un navegador? Son programas como Chrome, Opera, Microsoft Edge que nos permiten acceder a sitios como Twitter, Facebook, YouTube, Slack, etc.",0, "FrontEnd"));
         listAreas.add(new Areas("2. Desarrollo Movil", "El desarrollo móvil es simples palabras es crear aplicaciones para teléfonos y estas pueden funcionar en 2 sistemas operativos: Android de Google y iOS de Apple.\n" +
                 "\n" +
                 "En Android puedes desarrollar con lenguajes como Kotlin o Java, mientras que en IOS está Swift.", R.drawable.ut01, "java"));
