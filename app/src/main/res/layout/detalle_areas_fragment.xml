@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/name_data_areas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Name_area"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:gravity="center"/>
+    <ImageView
+        android:contentDescription="@string/Skip"
+        android:id="@+id/image_data_areas"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ut02"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"/>
+    <TextView
+        android:id="@+id/title_areas2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Names_areas_dev"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginStart="10dp"
+        />
+
+    <TextView
+        android:id="@+id/description_data_areas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Description_area"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:gravity="start|end"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        />
+
+
+</LinearLayout>

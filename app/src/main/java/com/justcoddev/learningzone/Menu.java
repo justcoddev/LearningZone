@@ -2,19 +2,25 @@ package com.justcoddev.learningzone;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.justcoddev.learningzone.Entidades.Areas;
+import com.justcoddev.learningzone.Fragments.DetalleAreasFragment;
+import com.justcoddev.learningzone.HomeFragment;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
-public class Menu extends AppCompatActivity {
+public class Menu extends AppCompatActivity implements iComunicaFragments {
     //variables
     private MeowBottomNavigation bottom_navigation_Menu;
+    //Variables fragments_datos_areas
+    DetalleAreasFragment detalleAreasFragment;
+    HomeFragment homeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,18 +28,21 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         bottom_navigation_Menu = findViewById(R.id.bottom_navigation_Menu);
-        bottom_navigation_Menu.add(new MeowBottomNavigation.Model(1,R.drawable.ic_home));
-        bottom_navigation_Menu.add(new MeowBottomNavigation.Model(2,R.drawable.ic_bookmarks));
-        bottom_navigation_Menu.add(new MeowBottomNavigation.Model(3,R.drawable.ic_profile));
+        bottom_navigation_Menu.add(new MeowBottomNavigation.Model(1, R.drawable.ic_home));
+        bottom_navigation_Menu.add(new MeowBottomNavigation.Model(2, R.drawable.ic_bookmarks));
+        bottom_navigation_Menu.add(new MeowBottomNavigation.Model(3, R.drawable.ic_profile));
 
-        bottom_navigation_Menu.show(1,true);
+        bottom_navigation_Menu.show(1, true);
+        //for init
         replace(new HomeFragment());
+
         bottom_navigation_Menu.setOnClickMenuListener(new Function1<MeowBottomNavigation.Model, Unit>() {
             @Override
             public Unit invoke(MeowBottomNavigation.Model model) {
-                switch (model.getId()){
+                switch (model.getId()) {
                     case 1:
                         replace(new HomeFragment());
+
                         break;
                     case 2:
                         replace(new BookmarkFragment());
@@ -110,7 +119,25 @@ public class Menu extends AppCompatActivity {
 
     private void replace(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame,fragment);
+        transaction.replace(R.id.frame, fragment);
+       // transaction.addToBackStack(null);
+        transaction.commit();
+
+    }
+
+    @Override
+    public void enviarDatosAreas(Areas areas) {
+        detalleAreasFragment = new DetalleAreasFragment();
+        //objetcs bundle
+        Bundle bundleEnvio = new Bundle();
+        //enviar objetc
+        bundleEnvio.putSerializable("object", areas);
+        detalleAreasFragment.setArguments(bundleEnvio);
+        //abrirFragment
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame, detalleAreasFragment);
+        transaction.addToBackStack(null);
         transaction.commit();
 
     }

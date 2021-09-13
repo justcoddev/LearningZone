@@ -1,7 +1,10 @@
 package com.justcoddev.learningzone;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,14 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
+import android.widget.Toast;
 
 import com.justcoddev.learningzone.Adaptadores.AreasAdapter;
-import com.justcoddev.learningzone.Adaptadores.AreasAdapter2;
 import com.justcoddev.learningzone.Entidades.Areas;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,7 +29,12 @@ public class HomeFragment extends Fragment {
     AreasAdapter areasAdapter;
     RecyclerView recyclerViewAreas;
     ArrayList<Areas> listAreas;
+    //ImageButton imageButton;
     //List<Areas> modelList;
+
+    //references fragments
+    Activity actividad;
+    iComunicaFragments interfaceComunicaFragments;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -76,8 +82,10 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         recyclerViewAreas = view.findViewById(R.id.recyclerView);
-
         listAreas = new ArrayList<>();
+
+
+
         //modelList= new ArrayList<>();
         //update list
         updatelist();
@@ -119,7 +127,24 @@ public class HomeFragment extends Fragment {
         recyclerViewAreas.setLayoutManager(new LinearLayoutManager(getContext()));
         areasAdapter = new AreasAdapter(getContext(), listAreas);
         recyclerViewAreas.setAdapter(areasAdapter);
+        /*imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                *//*
+                //ESTO PARA VER SI FUNCIONA CON ONCLICK
+                String nombre = listAreas.get(recyclerViewAreas.getChildAdapterPosition(view)).getName();
+                Toast.makeText(getContext(), "seleccionó"+ nombre, Toast.LENGTH_SHORT).show();*//*
+            }
+        });*/
 
+        areasAdapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              /*  String nombre = listAreas.get(recyclerViewAreas.getChildAdapterPosition(view)).getName();
+                Toast.makeText(getContext(), "seleccionó"+ nombre, Toast.LENGTH_SHORT).show();*/
+                interfaceComunicaFragments.enviarDatosAreas(listAreas.get(recyclerViewAreas.getChildAdapterPosition(view)));
+            }
+        });
 
     }
 
@@ -143,4 +168,17 @@ public class HomeFragment extends Fragment {
 
     }
 
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if(context instanceof Activity){
+            this.actividad = (Activity) context;
+            interfaceComunicaFragments = (iComunicaFragments) this.actividad;
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+    }
 }

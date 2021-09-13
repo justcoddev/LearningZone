@@ -1,6 +1,8 @@
 package com.justcoddev.learningzone.Entidades;
 
-public class Areas {
+import java.io.Serializable;
+
+public class Areas implements Serializable {
     private String name;
     private String description;
     private int image_id;

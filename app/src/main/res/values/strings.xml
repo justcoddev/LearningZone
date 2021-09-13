@@ -11,5 +11,6 @@
     <string name="more">Más</string>
     <string name="Name_area">Desarrollo Web</string>
     <string name="Description_area">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) </string>
-
+<!--Name areas out-->
+    <string name="Names_areas_dev">Nombre de Lenguaje: </string>
 </resources>
